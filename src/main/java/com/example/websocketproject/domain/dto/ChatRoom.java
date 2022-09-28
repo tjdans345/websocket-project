@@ -11,7 +11,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ChatRoom {
 
     private String roomId;
@@ -22,7 +21,6 @@ public class ChatRoom {
     public ChatRoom(String roomId, String name, Set<WebSocketSession> sessions) {
         this.roomId = roomId;
         this.name = name;
-        this.sessions = sessions;
     }
 
     public void handlerAction(WebSocketSession session, ChatMessageDTO chatMessageDTO, ChatService chatService) {
@@ -30,6 +28,7 @@ public class ChatRoom {
             sessions.add(session);
             chatMessageDTO.setMessage(chatMessageDTO.getSender() + "님이 입장했습니다.");
         }
+        sendMessage(chatMessageDTO, chatService);
     }
 
     private <T> void sendMessage(T message, ChatService chatService) {
