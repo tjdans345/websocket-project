@@ -1,4 +1,4 @@
-package com.example.websocketproject;
+package com.example.websocketproject.domain.dto;
 
 import lombok.*;
 import org.apache.logging.log4j.message.Message;
@@ -27,4 +27,9 @@ public class ChatMessageDTO {
         this.sender = sender;
         this.message = message;
     }
+
+
+
+
+
 }

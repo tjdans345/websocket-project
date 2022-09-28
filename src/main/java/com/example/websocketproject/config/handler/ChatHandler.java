@@ -1,5 +1,7 @@
 package com.example.websocketproject.config.handler;
 
+import com.example.websocketproject.domain.dto.ChatMessageDTO;
+import com.example.websocketproject.domain.dto.ChatRoom;
 import com.example.websocketproject.service.ChatService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
@@ -41,8 +43,12 @@ public class ChatHandler extends TextWebSocketHandler {
     protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
 
         String payLoad = message.getPayload();
-
         log.info("payLoad : {}" , payLoad);
+        ChatMessageDTO chatMessageDTO = objectMapper.readValue(payLoad, ChatMessageDTO.class);
+
+        ChatRoom chatRoom = chatService.findRoomById(chatMessageDTO.getRoomId());
+        chatRoom.handlerAction(session, chatMessageDTO, chatService);
+
     }
 
     /**
