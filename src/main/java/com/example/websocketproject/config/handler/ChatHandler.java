@@ -27,7 +27,7 @@ public class ChatHandler extends TextWebSocketHandler {
     private final ChatService chatService;
 
     // * payload ? : 페이로드란 전송되는 데이터를 의미함.
-    // 데이터를 전송할 때, Header와 META 데이터, 에러 체크 비트 등과 같은 다양한 요소들을 함께 보내 데이터 전송 효율과 안정성을 높히게 된다.
+    // 데이터를 전송할 때, Header 와 META 데이터, 에러 체크 비트 등과 같은 다양한 요소들을 함께 보내 데이터 전송 효율과 안정성을 높히게 된다.
     // ***** 이 때, 보내고자 하는 데이터 자체를 의미하는 것이 페이로드이다.
     // 예를들어 택배 배송을 보내고 받을 때 *****"택배 물건"이 "페이로드"*****고 송장이나 박스 등과 같이 부가적인 것은 페이로드가 아니다.
 

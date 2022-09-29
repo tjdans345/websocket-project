@@ -10,7 +10,7 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 /**
  * 핸들러를 이용해 WebSocket 을 활성화하기 위한 Config
  * @EnableWebSocket 어노테이션을 사용해 WebSocket 을 활성화 하도록 한다.
- * WebSocket 에 접속하기 위한 Endpoint는 /chat으로 설정
+ * WebSocket 에 접속하기 위한 Endpoint 는 /chat 으로 설정
  * 도메인이 다른 서버에서도 접속 가능하도록 CORS : setAllowedOrigins("*"); 를 추가해준다.
  * 클라이언트가 엔드포인트로 접근 했을 때 커넥션을 연결하고 메세지 통신을 할 수 있는 기본 준비를 마쳤다.
  */
@@ -31,4 +31,9 @@ public class WebSocketConfig implements WebSocketConfigurer {
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(chatHandler, "ws/v1/api/chat").setAllowedOrigins("*");
     }
+
+
+
+
+
 }
