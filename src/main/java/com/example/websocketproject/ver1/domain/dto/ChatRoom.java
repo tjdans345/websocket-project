@@ -1,10 +1,8 @@
-package com.example.websocketproject.domain.dto;
+package com.example.websocketproject.ver1.domain.dto;
 
-import com.example.websocketproject.service.ChatService;
-import lombok.AccessLevel;
+import com.example.websocketproject.ver1.service.ChatService;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import org.springframework.web.socket.WebSocketSession;
 
 import java.util.HashSet;

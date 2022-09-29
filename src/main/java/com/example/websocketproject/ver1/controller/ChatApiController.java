@@ -1,8 +1,7 @@
-package com.example.websocketproject.controller;
+package com.example.websocketproject.ver1.controller;
 
-import com.example.websocketproject.domain.dto.ChatRoom;
-import com.example.websocketproject.service.ChatService;
-import lombok.Getter;
+import com.example.websocketproject.ver1.domain.dto.ChatRoom;
+import com.example.websocketproject.ver1.service.ChatService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;

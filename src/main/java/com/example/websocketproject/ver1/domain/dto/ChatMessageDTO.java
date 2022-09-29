@@ -1,4 +1,4 @@
-package com.example.websocketproject.domain.dto;
+package com.example.websocketproject.ver1.domain.dto;
 
 import lombok.*;
 import org.apache.logging.log4j.message.Message;

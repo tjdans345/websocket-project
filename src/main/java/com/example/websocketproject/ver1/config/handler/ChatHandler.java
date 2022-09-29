@@ -1,8 +1,8 @@
-package com.example.websocketproject.config.handler;
+package com.example.websocketproject.ver1.config.handler;
 
-import com.example.websocketproject.domain.dto.ChatMessageDTO;
-import com.example.websocketproject.domain.dto.ChatRoom;
-import com.example.websocketproject.service.ChatService;
+import com.example.websocketproject.ver1.domain.dto.ChatMessageDTO;
+import com.example.websocketproject.ver1.domain.dto.ChatRoom;
+import com.example.websocketproject.ver1.service.ChatService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
