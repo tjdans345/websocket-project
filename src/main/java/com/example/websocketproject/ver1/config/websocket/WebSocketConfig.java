@@ -27,6 +27,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
 //    웹 어플리케이션은 리소스가 자신의 출처( domain, protocol, port )와 다를 때 교차 출처 HTTP 요청을 실행한다.
 //    이에 대한 응답으로 서버는 Access-Control-Allow-Origin 헤더를 다시 보낸다.
 
+    // 웹 소켓 컨피그 설정
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(chatHandler, "ws/v1/api/chat").setAllowedOrigins("*");
